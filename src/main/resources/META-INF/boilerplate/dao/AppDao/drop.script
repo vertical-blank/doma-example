@@ -1,0 +1,12 @@
+drop table sequential_01;
+drop table sequential_02;
+drop table sequential_03;
+drop table sequential_04;
+
+drop table sequential_101;
+drop table sequential_102;
+drop table sequential_103;
+
+drop table tbl1;
+
+drop table tbl2;

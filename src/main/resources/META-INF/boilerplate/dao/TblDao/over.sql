@@ -1,0 +1,5 @@
+SELECT
+    sum(v1) OVER w,
+    avg(v1) OVER w
+FROM tbl1
+WINDOW w AS (PARTITION BY v2 ORDER BY v1 DESC);

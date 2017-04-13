@@ -1,0 +1,39 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply from: 'eclipse.gradle'
+
+mainClassName = "boilerplate.Runner"
+
+version = '2.16.1-SNAPSHOT'
+ext.dependentVersion = '2.16.0'
+processResources.destinationDir = compileJava.destinationDir
+compileJava.dependsOn processResources
+
+compileJava {
+    options.encoding = 'UTF-8'
+}
+
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {url 'https://oss.sonatype.org/content/repositories/snapshots/'}
+}
+
+dependencies {
+    compile "org.seasar.doma:doma:${dependentVersion}"
+    compile 'org.postgresql:postgresql:42.0.0'
+    compile 'org.eclipse.collections:eclipse-collections:8.1.0'
+    runtime 'com.h2database:h2:1.3.175'
+    testCompile 'junit:junit:4.11'
+}
+
+apply plugin: 'idea'
+idea.module.inheritOutputDirs = true

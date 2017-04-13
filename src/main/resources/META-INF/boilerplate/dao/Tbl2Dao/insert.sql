@@ -1,0 +1,1 @@
+insert into tbl2 (name) values (/* name */'name')

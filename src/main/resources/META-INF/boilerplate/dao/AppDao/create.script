@@ -1,0 +1,73 @@
+create table sequential_01 (
+    id serial not null primary key,
+    dat01 integer not null,
+    dat02 integer not null
+);
+create table sequential_02 (
+    id serial not null primary key,
+    dat01 integer not null,
+    dat02 integer not null
+);
+create table sequential_03 (
+    id serial not null primary key,
+    dat01 integer not null,
+    dat02 integer not null
+);
+create table sequential_04 (
+    id serial not null primary key,
+    dat01 integer not null,
+    dat02 integer not null
+);
+insert into sequential_01 values(DEFAULT,111,121);
+insert into sequential_01 values(DEFAULT,112,122);
+insert into sequential_01 values(DEFAULT,113,123);
+insert into sequential_02 values(DEFAULT,211,221);
+insert into sequential_02 values(DEFAULT,212,222);
+insert into sequential_02 values(DEFAULT,213,223);
+insert into sequential_03 values(DEFAULT,311,321);
+insert into sequential_03 values(DEFAULT,312,322);
+insert into sequential_03 values(DEFAULT,313,323);
+insert into sequential_04 values(DEFAULT,411,421);
+insert into sequential_04 values(DEFAULT,412,422);
+insert into sequential_04 values(DEFAULT,413,423);
+
+create table sequential_101 (
+    id serial not null primary key,
+    dat01 text not null,
+    dat02 text not null
+);
+create table sequential_102 (
+    id serial not null primary key,
+    dat01 text not null,
+    dat02 text not null
+);
+create table sequential_103 (
+    id serial not null primary key,
+    dat01 text not null,
+    dat02 text not null
+);
+insert into sequential_101 values(DEFAULT,'9111','9121');
+insert into sequential_101 values(DEFAULT,'9112','9122');
+insert into sequential_101 values(DEFAULT,'9113','9123');
+insert into sequential_102 values(DEFAULT,'9211','9221');
+insert into sequential_102 values(DEFAULT,'9212','9222');
+insert into sequential_102 values(DEFAULT,'9213','9223');
+insert into sequential_103 values(DEFAULT,'9311','9321');
+insert into sequential_103 values(DEFAULT,'9312','9322');
+insert into sequential_103 values(DEFAULT,'9313','9323');
+
+create table tbl1(id serial primary key, v1 int, v2 int);
+insert into tbl1 (v1, v2) values (1, 10);
+insert into tbl1 (v1, v2) values (1, 20);
+insert into tbl1 (v1, v2) values (1, 30);
+insert into tbl1 (v1, v2) values (1, 40);
+insert into tbl1 (v1, v2) values (1, 50);
+insert into tbl1 (v1, v2) values (2, 100);
+insert into tbl1 (v1, v2) values (2, 200);
+insert into tbl1 (v1, v2) values (2, 300);
+insert into tbl1 (v1, v2) values (2, 400);
+insert into tbl1 (v1, v2) values (2, 500);
+
+create table tbl2(id serial primary key, name text);
+
+
